@@ -4,7 +4,7 @@
   "description": "Biding game",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "test": "jest",
     "start": "node index"
   },
   "repository": {
@@ -19,12 +19,15 @@
   "homepage": "https://github.com/Urchmaney/bid#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.11.7",
     "socket.io": "^3.0.4"
   },
   "devDependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.6.3"
   }
 }
