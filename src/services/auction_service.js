@@ -19,12 +19,19 @@ const registerNewBid = async (
 // { new: true },
 
 const createAuction = async (auction) => {
-  auction = new Auction(auction);
-  await auction.save();
-  return auction;
+  try {
+    auction = new Auction(auction);
+    await auction.save();
+    return auction;
+  } catch (e) {
+    return e.message;
+  }
 };
+
+const getAuctions = async () => Auction.find({});
 
 module.exports = {
   registerNewBid,
   createAuction,
+  getAuctions,
 };
